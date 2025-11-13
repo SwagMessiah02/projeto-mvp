@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Container geral */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #ffffff;
+  color: #111827; /* text-gray-900 */
+}
+
+/* Cabeçalho */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #2563eb; /* blue-600 */
+  color: #ffffff;
+  padding: 1rem 2rem;
+}
+
+.header-logo {
+  width: 16rem; /* w-64 */
+  justify-content: flex-start;
+}
+
+/* Main */
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Seção Principal */
+.section-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(to right, #2563eb, #60a5fa);
+  color: #ffffff;
+  padding: 3rem 1.5rem;
+}
+
+.section-content {
+  max-width: 32rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.section-text {
+  font-size: 1.125rem; /* text-lg */
+  margin-bottom: 1rem;
+}
+
+.section-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.button-outline {
+  background-color: #ffffff;
+  color: #2563eb;
+}
+
+/* Imagem da seção */
+.section-image {
+  width: 16rem; /* w-64 */
+  margin-top: 2rem;
+  /* border-radius: 9999px; /* rounded-full */
+  border-style: solid;
+}
+
+.section-carrossel {
+  width: 128rem; /* w-64 */
+  height: 14rem;
+  margin-top: 2rem;
+  /* border-radius: 9999px; /* rounded-full */
+  border-style: solid;
+}
+
+/* Seção Apoio Escolar */
+.section-apoio {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background-color: #f9fafb; /* gray-50 */
+}
+
+.section-subtitle {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2563eb;
+}
+
+.section-text-center {
+  max-width: 42rem;
+  margin: 0 auto 1.5rem auto;
+  color: #374151; /* text-gray-700 */
+}
+
+.button-inscricao {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* Seção Vídeo */
+.section-video {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 64rem; /* max-w-4xl */
+  aspect-ratio: 16 / 9;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-play {
+  color: #ffffff;
+  width: 4rem;
+  height: 4rem;
+  opacity: 0.8;
+}
+
+/* Rodapé */
+.app-footer {
+  width: 100%;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Container do carrossel */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Wrapper que se move */
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Cada slide */
+.carousel-slide {
+  flex: 0 0 100%; /* ocupa 100% do container visível */
+}
+
+/* Botões */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: #1d4ed8; /* azul-700 */
+  border-radius: 9999px;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s;
+}
+
+.carousel-button:hover {
+  background-color: #f3f4f6; /* cinza claro */
+}
+
+.carousel-button.left-0 {
+  left: 0;
+}
+
+.carousel-button.right-0 {
+  right: 0;
+}
+
+/* Transform do wrapper baseado no estado current (0,1,2,...) */
+.current-0 { transform: translateX(0%); }
+.current-1 { transform: translateX(-100%); }
+.current-2 { transform: translateX(-200%); }
+.current-3 { transform: translateX(-300%); }
+/* Se adicionar mais slides, continuar a sequência */
